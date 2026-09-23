@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rully Anggoro | IT Support Specialist Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            800: '#102a43',
+                            900: '#0a192f', // Main Navy
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b', // Main Gold
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f0f4f8; }
+        ::-webkit-scrollbar-thumb { background: #0a192f; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #102a43; }
+        
+        /* Subtle animation classes */
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-navy-900 tracking-tight">
+                        Rully<span class="text-gold-500">.</span>
+                    </a>
+                </div>
+                <!-- Desktop Nav -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8 text-sm font-medium text-slate-600">
+                        <li><a href="#about" class="hover:text-gold-500 transition-colors">About</a></li>
+                        <li><a href="#experience" class="hover:text-gold-500 transition-colors">Experience</a></li>
+                        <li><a href="#skills" class="hover:text-gold-500 transition-colors">Skills</a></li>
+                        <li><a href="#contact" class="hover:text-gold-500 transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-navy-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Nav Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
+            <ul class="px-6 pt-2 pb-4 space-y-3 text-sm font-medium text-slate-600">
+                <li><a href="#about" class="block hover:text-gold-500">About</a></li>
+                <li><a href="#experience" class="block hover:text-gold-500">Experience</a></li>
+                <li><a href="#skills" class="block hover:text-gold-500">Skills</a></li>
+                <li><a href="#contact" class="block hover:text-gold-500">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh]">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+                    <!-- Text Content -->
+                    <div class="w-full lg:w-3/5 text-center lg:text-left fade-in-up">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-navy-800 text-sm font-semibold mb-6">
+                            <span class="flex h-2 w-2 bg-green-500 rounded-full mr-2"></span>
+                            Available for Work
+                        </div>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 leading-tight mb-6">
+                            Hi, I'm Rully Anggoro. <br>
+                            <span class="text-gold-500">IT Support Specialist.</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Ensuring 99% Uptime & Seamless IT Operations. <br class="hidden md:block">
+                            With 3+ years of experience managing robust network infrastructures, Windows/Linux environments, and providing exceptional end-user support.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="#contact" class="px-8 py-3.5 rounded-lg bg-navy-900 text-white font-medium hover:bg-navy-800 transition-all shadow-lg hover:shadow-xl shadow-navy-900/20 w-full sm:w-auto text-center">
+                                Contact Me
+                            </a>
+                            <a href="#experience" class="px-8 py-3.5 rounded-lg bg-white text-navy-900 border-2 border-navy-900 font-medium hover:bg-slate-50 transition-all w-full sm:w-auto text-center">
+                                View Experience
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Image / Graphic Card -->
+                    <div class="w-full lg:w-2/5 flex justify-center fade-in-up delay-200">
+                        <div class="relative bg-[#FDFBF7] border border-amber-100/80 shadow-2xl rounded-3xl p-8 w-full max-w-sm flex flex-col items-center text-center">
+                            <!-- Upper left corner badge -->
+                            <div class="absolute top-4 left-4 bg-white px-3 py-1.5 rounded-full shadow-sm border border-slate-100 flex items-center gap-2 z-10">
+                                <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-certificate"></i>
+                                </div>
+                                <span class="text-xs font-bold text-slate-800">Certified MTCNA</span>
+                            </div>
+
+                            <!-- Upper center circular profile picture frame with drop shadow -->
+                            <div class="mt-8 mb-4">
+                                <div class="relative w-36 h-36 md:w-40 md:h-40 mx-auto rounded-full p-1 bg-white shadow-md flex items-center justify-center overflow-hidden">
+                                    <img src="IMG-20210502-WA0000.jpg" 
+                                         onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-full h-full rounded-full bg-navy-900 text-amber-400 flex items-center justify-center text-3xl font-bold shadow-inner ring-2 ring-amber-400/30\'>RA</div>';" 
+                                         alt="Rully Anggoro" 
+                                         class="w-full h-full rounded-full object-cover shadow-inner">
+                                </div>
+                            </div>
+
+                            <!-- Title text with a thin horizontal accent line underneath -->
+                            <div class="mb-6 w-full">
+                                <h3 class="text-lg font-bold text-slate-900">Rully Anggoro</h3>
+                                <p class="text-sm font-medium text-amber-600 mb-3">IT Support Specialist</p>
+                                <div class="w-16 h-0.5 bg-amber-400 mx-auto rounded-full"></div>
+                            </div>
+
+                            <!-- Bottom center pill button with green status dot -->
+                            <div class="mt-auto">
+                                <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-navy-800 text-xs font-semibold shadow-sm">
+                                    <span class="flex h-2 w-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                                    Available for Work
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row gap-12 items-start">
+                    <div class="w-full md:w-1/3">
+                        <h2 class="text-3xl font-bold text-navy-900 mb-2">About Me</h2>
+                        <div class="h-1 w-20 bg-gold-500 rounded-full mb-6"></div>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                            I am a final-year Informatics Engineering student at <strong>Indraprastha University (UNINDRA)</strong>, based in Bekasi. With over 3 years of hands-on experience as an IT Support and Helpdesk professional, I specialize in resolving complex technical issues and maintaining highly available IT infrastructures.
+                        </p>
+                        <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                            My expertise spans across <strong>Windows Server and Linux environments</strong>, Active Directory administration, and MikroTik network configuration. I take pride in having managed over 50 workstations and consistently resolving 50-100 support tickets weekly, all while sustaining a 99% operational uptime for the business. I am eager to bring my strong technical troubleshooting and infrastructure maintenance skills to a forward-thinking team.
+                        </p>
+                        
+                        <!-- Quick Facts -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-slate-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-navy-50 flex items-center justify-center text-navy-900">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500">Location</p>
+                                    <p class="font-medium text-slate-800">Bekasi, Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-navy-50 flex items-center justify-center text-navy-900">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500">Education</p>
+                                    <p class="font-medium text-slate-800">Informatics Eng. (UNINDRA)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-navy-50 flex items-center justify-center text-navy-900">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500">Experience</p>
+                                    <p class="font-medium text-slate-800">3+ Years IT Support</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-navy-50 flex items-center justify-center text-navy-900">
+                                    <i class="fa-solid fa-language"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-slate-500">Communication</p>
+                                    <p class="font-medium text-slate-800">End-User Tech Translation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 bg-slate-50">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-navy-900 mb-2">Professional Experience</h2>
+                    <div class="h-1 w-20 bg-gold-500 rounded-full mx-auto mb-4"></div>
+                    <p class="text-slate-600 max-w-2xl mx-auto">Highlighting my core responsibilities and achievements during my tenure at PT Profescipta Wahana Teknik.</p>
+                </div>
+
+                <!-- Main Timeline Header -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mb-10">
+                    <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-navy-900">IT Support Specialist</h3>
+                            <p class="text-lg text-gold-600 font-medium">PT Profescipta Wahana Teknik • East Jakarta</p>
+                        </div>
+                        <div class="inline-block px-4 py-2 bg-navy-50 text-navy-900 rounded-lg font-medium text-sm">
+                            <i class="fa-regular fa-calendar mr-2"></i> Mar 2022 – Mar 2026
+                        </div>
+                    </div>
+                    <p class="text-slate-600 mb-6">Played a pivotal role in ensuring the technological backbone of the company operated seamlessly. Managed hardware, networking, identity access, and provided tier-1 and tier-2 support to staff.</p>
+                    
+                    <!-- Responsibilities Grid Cards -->
+                    <h4 class="font-semibold text-navy-900 mb-4 border-b pb-2 border-slate-100">Key Responsibilities & Projects</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Card 1 -->
+                        <div class="bg-slate-50 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+                            <div class="w-10 h-10 bg-white shadow-sm rounded-lg flex items-center justify-center text-navy-900 mb-4">
+                                <i class="fa-solid fa-desktop"></i>
+                            </div>
+                            <h5 class="font-bold text-slate-800 mb-2">Systems Administration</h5>
+                            <p class="text-sm text-slate-600">Maintained and configured 50+ workstations (Windows 7/10/11, Server 2003/2007, Ubuntu/Debian). Achieved 99% uptime and managed fleet printer sharing across multiple vendor devices.</p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-slate-50 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+                            <div class="w-10 h-10 bg-white shadow-sm rounded-lg flex items-center justify-center text-navy-900 mb-4">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                            <h5 class="font-bold text-slate-800 mb-2">Active Directory Management</h5>
+                            <p class="text-sm text-slate-600">Administered AD accounts, orchestrated user onboarding/offboarding, provisioned corporate emails, and securely configured file server access permissions.</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-slate-50 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+                            <div class="w-10 h-10 bg-white shadow-sm rounded-lg flex items-center justify-center text-navy-900 mb-4">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <h5 class="font-bold text-slate-800 mb-2">Network & Surveillance</h5>
+                            <p class="text-sm text-slate-600">Monitored and configured MikroTik routers, TP-Link/Ruijie Access Points, and Hikvision CCTV systems ensuring robust office connectivity and security.</p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="bg-slate-50 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+                            <div class="w-10 h-10 bg-white shadow-sm rounded-lg flex items-center justify-center text-navy-900 mb-4">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h5 class="font-bold text-slate-800 mb-2">Technical Support</h5>
+                            <p class="text-sm text-slate-600">Delivered fast-response on-site and remote support (via AnyDesk, TeamViewer) to resolve technical incidents, handling 50-100 tickets weekly.</p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="bg-slate-50 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+                            <div class="w-10 h-10 bg-white shadow-sm rounded-lg flex items-center justify-center text-navy-900 mb-4">
+                                <i class="fa-solid fa-hard-drive"></i>
+                            </div>
+                            <h5 class="font-bold text-slate-800 mb-2">Data Backup & Assets</h5>
+                            <p class="text-sm text-slate-600">Executed dual-location data backup routines. Managed IT asset documentation, software tracking, and vendor SSL/domain renewals.</p>
+                        </div>
+                        
+                        <!-- Card 6 -->
+                        <div class="bg-slate-50 p-6 rounded-xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+                            <div class="w-10 h-10 bg-white shadow-sm rounded-lg flex items-center justify-center text-navy-900 mb-4">
+                                <i class="fa-solid fa-file-contract"></i>
+                            </div>
+                            <h5 class="font-bold text-slate-800 mb-2">Process Documentation</h5>
+                            <p class="text-sm text-slate-600">Compiled comprehensive SOP documents, maintained asset inventories, and drafted network topology diagrams for standardized operations.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row gap-16">
+                    
+                    <!-- Title Column -->
+                    <div class="w-full md:w-1/3">
+                        <h2 class="text-3xl font-bold text-navy-900 mb-2">My Skills</h2>
+                        <div class="h-1 w-20 bg-gold-500 rounded-full mb-6"></div>
+                        <p class="text-slate-600 mb-6">A balanced combination of deep technical expertise (Hard Skills) and collaborative interpersonal abilities (Soft Skills) acquired over years of hands-on experience.</p>
+                    </div>
+
+                    <!-- Skills Content Column -->
+                    <div class="w-full md:w-2/3 space-y-12">
+                        
+                        <!-- Hard Skills -->
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900 mb-6 flex items-center gap-2">
+                                <i class="fa-solid fa-wrench text-gold-500"></i> Technical Expertise (Hard Skills)
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <!-- Networking & Hardware -->
+                                <span class="px-4 py-2 rounded-full bg-navy-50 text-navy-800 border border-navy-100 text-sm font-medium">MikroTik (RouterOS)</span>
+                                <span class="px-4 py-2 rounded-full bg-navy-50 text-navy-800 border border-navy-100 text-sm font-medium">TP-Link & Ruijie AP</span>
+                                <span class="px-4 py-2 rounded-full bg-navy-50 text-navy-800 border border-navy-100 text-sm font-medium">Hikvision CCTV Systems</span>
+                                <span class="px-4 py-2 rounded-full bg-navy-50 text-navy-800 border border-navy-100 text-sm font-medium">PC Assembly</span>
+                                <span class="px-4 py-2 rounded-full bg-navy-50 text-navy-800 border border-navy-100 text-sm font-medium">Fleet Printers (Epson, HP, Brother)</span>
+                                
+                                <!-- Systems & Servers -->
+                                <span class="px-4 py-2 rounded-full bg-blue-50 text-blue-800 border border-blue-100 text-sm font-medium">Active Directory</span>
+                                <span class="px-4 py-2 rounded-full bg-blue-50 text-blue-800 border border-blue-100 text-sm font-medium">Windows Server (2003/2007)</span>
+                                <span class="px-4 py-2 rounded-full bg-blue-50 text-blue-800 border border-blue-100 text-sm font-medium">Windows 7/10/11</span>
+                                <span class="px-4 py-2 rounded-full bg-blue-50 text-blue-800 border border-blue-100 text-sm font-medium">Linux (Ubuntu, Debian)</span>
+                                <span class="px-4 py-2 rounded-full bg-blue-50 text-blue-800 border border-blue-100 text-sm font-medium">File Server Permissions</span>
+                                
+                                <!-- Tools & Maintenance -->
+                                <span class="px-4 py-2 rounded-full bg-slate-100 text-slate-800 border border-slate-200 text-sm font-medium">AnyDesk / TeamViewer / UltraViewer</span>
+                                <span class="px-4 py-2 rounded-full bg-slate-100 text-slate-800 border border-slate-200 text-sm font-medium">Data Backup</span>
+                                <span class="px-4 py-2 rounded-full bg-slate-100 text-slate-800 border border-slate-200 text-sm font-medium">Ticket Management</span>
+                            </div>
+                        </div>
+
+                        <!-- Soft Skills -->
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900 mb-6 flex items-center gap-2">
+                                <i class="fa-solid fa-users text-gold-500"></i> Professional Traits (Soft Skills)
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
+                                    <h4 class="font-bold text-slate-800 text-sm mb-1">Problem Solving & Analytical</h4>
+                                    <p class="text-xs text-slate-500">Menganalisis dan menyelesaikan gangguan jaringan atau kerusakan perangkat secara cepat.</p>
+                                </div>
+                                <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
+                                    <h4 class="font-bold text-slate-800 text-sm mb-1">End-User Communication</h4>
+                                    <p class="text-xs text-slate-500">Menjelaskan solusi teknis dengan bahasa yang gampang dipahami oleh staf non-IT.</p>
+                                </div>
+                                <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
+                                    <h4 class="font-bold text-slate-800 text-sm mb-1">Incident & Time Management</h4>
+                                    <p class="text-xs text-slate-500">Memprioritaskan penanganan 50-100 tiket gangguan secara efisien per minggu.</p>
+                                </div>
+                                <div class="bg-white border border-slate-100 p-4 rounded-xl shadow-sm">
+                                    <h4 class="font-bold text-slate-800 text-sm mb-1">Documentation & Collaboration</h4>
+                                    <p class="text-xs text-slate-500">Menyusun SOP dan berkolaborasi erat dengan vendor ISP, hosting, serta supplier.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-navy-900 relative overflow-hidden">
+            <!-- Background accent -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-navy-800 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-gold-900/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+            
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Let's Build Robust IT Systems Together</h2>
+                <p class="text-navy-100 text-lg mb-10 max-w-2xl mx-auto">
+                    Currently seeking new opportunities as an IT Support Specialist. Whether you have an open role or just want to connect, my inbox is always open.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+                    <a href="mailto:rullyanggoro5@gmail.com" class="flex items-center gap-3 px-8 py-4 bg-gold-500 text-navy-900 font-bold rounded-lg hover:bg-gold-400 transition-colors shadow-lg shadow-gold-500/20 w-full sm:w-auto justify-center">
+                        <i class="fa-solid fa-envelope"></i>
+                        rullyanggoro5@gmail.com
+                    </a>
+                    <a href="https://wa.me/628996953512" target="_blank" class="flex items-center gap-3 px-8 py-4 bg-transparent border border-navy-400 text-white font-semibold rounded-lg hover:bg-navy-800 transition-colors w-full sm:w-auto justify-center">
+                        <i class="fa-solid fa-phone"></i>
+                        0899-6953-512
+                    </a>
+                </div>
+
+                <div class="flex justify-center gap-6">
+                    <a href="https://www.linkedin.com/in/rully-anggoro" target="_blank" class="w-12 h-12 rounded-full bg-navy-800 flex items-center justify-center text-white hover:bg-gold-500 hover:text-navy-900 transition-all text-xl" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-navy-900 border-t border-navy-800 py-8 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-navy-300 text-sm">
+                &copy; 2026 Rully Anggoro. All rights reserved.
+            </p>
+            <p class="text-navy-400 text-sm flex items-center gap-2">
+                Built with <i class="fa-solid fa-heart text-gold-500 text-xs"></i> and Tailwind CSS
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Simple Intersection Observer for scroll animations (fade-in-up effect on elements with specific classes)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // This allows items to be hidden initially until scrolled to, if extended styling is added
+        // In current setup, animations run mostly on page load for the hero section via standard css.
+    </script>
+</body>
+</html>
